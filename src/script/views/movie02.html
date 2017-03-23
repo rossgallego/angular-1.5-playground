@@ -1,0 +1,128 @@
+   <div ng-controller='movies as mov'>
+    <div class="jumbotron" ng-cloak>
+      <div class="container">
+        <!-- <h1>{{message}}</h1> -->
+        <!-- <p> {{gradovi}}</p> -->
+        <div class="row">
+          <div class="col-md-12">
+            <h3>sample api to search</h3>
+            <form class="form-horizontal movie-search" ng-submit="mov.searchMov()">
+              <div class="form-group">
+                <!-- <label class="control-label col-sm-12 movie-search-label">Email:</label> -->
+                <div class="col-sm-12"> 
+                  <input type="input" ng-model="mov.moviequery" class="form-control movie-search-input" placeholder="Search Movies">
+                </div>
+              </div>
+
+
+              <div class="form-group"> 
+                <div class="col-sm-offset-4 col-sm-4">
+                  <button type="submit" class="btn btn-default movie-search-submit" >Submit</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="col-md-8">
+          
+            
+
+
+          </div>
+        </div>
+        
+
+
+        
+      </div>
+    </div>
+    <div class="container">
+      <!-- Example row of columns -->
+
+      <hr>
+
+    <div class="row movies-results">
+                <!-- <div class="movies-result col-md-4" ng-repeat="x in movieInfo22"> -->
+                <div class="movies-result col-md-4" ng-repeat="x in mov.movieInfoInline">
+                    <div class="movies-results-images">
+                        <img class="movies-results-image" src="http://image.tmdb.org/t/p/w300{{x.poster_path}}">    
+                    </div>
+                    
+                    <h3> {{x.original_title}}</h3>
+                    <p>{{x.release_date}}</p>
+                    <p>{{x.overview}}</p>
+                    
+                </div>
+                <!-- <div clas="col-md-3">{{x}}</div> -->
+    </div>
+
+<!-- start    -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>movies</h2>
+          <p>below is content from service </p>
+          <!-- <p> {{movieInfo.results[0].poster_path}}</p> -->
+          {{movieInfo}}
+          <!-- <img src="{{movieImageUrl}}{{moviePoster}}"> -->
+           <!--  <li ng-repeat="movie in movieInfo.results">
+                <p><img src="http://image.tmdb.org/t/p/w300{{movie.poster_path}}"/></p>
+            </li> -->
+        </div>
+
+
+
+        <!-- <div class="col-md-4" ng-controller='movieCtrl as test'> -->
+        <div class="col-md-4">
+          <h2>movies</h2>
+       <!--    <p>factory below</p>
+          <p>{{movieFac}}</p> -->
+
+          <p>inline below</p>
+          <!-- <p>{{movieInfoInline}}</p> -->
+          <!-- <p>{{movieInfo2}}</p> -->
+
+         
+          <!-- <p>{{movieInfoInline}}</p> -->
+
+          
+            <!-- {{test.Stuff}} -->
+
+        <!--     <ul ng-repeat="x in test.Stuff">
+                <li>{{x}}</li>
+            </ul> -->
+
+      <!-- <p>{{movieInfoInline[0].overview}}</p> -->
+
+ 
+        </div>
+
+
+
+
+        <!-- 
+        when using routes, dont explicitly set controller in routes. explicitely set in HTML
+        ng-repeat creates its own scope which will create scope soup
+        $parent (this needed to bind to innner scope to outer scope. ex: inside http request reponse)
+        bindto controller ex:  controller="m as ctrl"
+        
+        badrec is maybe cuased by invalid url (unable to read parent scope vriable..etc..)
+        cors error maybe is caused by invalid url(same as above)
+
+        -->
+
+
+
+        <div class="col-md-4">
+          <h2>movies</h2>
+          <!-- <p>{{mo}}</p> -->
+          <p> {{movieImage}}</p>
+          <!-- <p> {{movieImage.images.base_url}}</p> -->
+          <p>{{movieImageUrl}}</p>
+          <p></p>
+        </div>
+
+      </div>
+
+<!-- end -->
+    </div>
+</div>

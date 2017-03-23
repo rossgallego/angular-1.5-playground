@@ -1,0 +1,40 @@
+<div ng-controller="znotesController as zznote"> 
+	<div class="col-md-12">
+		<div class="znotes">
+
+			<div class="col-md-12" ng-repeat="ff in zznote.znotes track by $index">
+				<div class="znotes-content">
+					<!-- <div ng-show="zznote.showBtn"> -->
+					<div ng-hide="$index == zznote.selected">
+
+						<h3>{{ff.znoteTitle}}</h3>
+						<p>{{ff.znoteContent}}</p>
+						
+						<div class="clearfix"></div>
+						<button class="btn btn-danger" ng-click="zznote.deleteNote($index)">Delete</button>
+						<button class="btn btn-primary" ng-click=zznote.updateNote($index)>Edit</button>
+					</div>	
+					<!-- <form class="navbar-form navbar-left znotes-form" role="search" ng-submit="" ng-show="zznote.updateBtn"> -->
+					<form class="navbar-form navbar-left" role="search" ng-submit="" ng-show="$index == zznote.selected">
+						<div class="form-group znotes-form-group">
+							<input type="text" class="form-control znotes-input" placeholder="title" value="{{ff.znoteTitle}}" ng-model="ff.znoteTitle">
+							<textarea class="form-control znotes-note" rows="7" value="{{ff.znoteContent}}" ng-model="ff.znoteContent"></textarea>
+						</div>
+						<button type="submit" class="btn btn-success" ng-click="zznote.updateNoteSave()">Save</button>
+					</form>
+					<div class="clearfix"></div>
+				</div>	
+			</div>
+
+			<!-- <form class="navbar-form navbar-left znotes-form" role="search" ng-submit="change({title:znotetitle,content:znotecontent})"> -->
+			<form class="navbar-form navbar-left znotes-form" role="search" ng-submit="zznote.addNote(zznote.znotetitle,zznote.znotecontent)">
+				<div class="form-group znotes-form-group">
+				<input type="text" class="form-control znotes-input" placeholder="title" ng-model="zznote.znotetitle">
+				<textarea class="form-control znotes-note" rows="7" ng-model="zznote.znotecontent"></textarea>
+				</div>
+				<div class="clearfix"></div>
+				<button type="submit" class="btn btn-success">Add</button>
+			</form>
+		</div>
+	</div>
+</div>

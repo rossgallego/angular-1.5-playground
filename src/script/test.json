@@ -1,0 +1,47 @@
+{
+   "ponudjene": [
+      "Ada",
+      "Adaševci",
+      "Žitni Potok",
+      "Žitorađa",
+      "Zlatibor",
+      "Zlatica",
+      "Zlodol",
+      "Zlot",
+      "Zmajevo",
+      "Zminjak",
+      "Zrenjanin",
+      "Zubin Potok",
+      "Žuč",
+      "Zuce",
+      "Zvečan",
+      "Zvezdan",
+      "Zvonce",
+      "Đala",
+      "Đunis",
+      "Đurđevo",
+      "Đurđin"
+   ],
+   "tacno": [
+      "Zvezdan",
+      "Bor",
+      "Rudna Glava",
+      "Majdanpek"
+   ],
+   "vreme": 100,
+   "oblast": "<h1> this is a template NOT WORKING</h1>",
+
+   "webdesign": {
+      "skill":"Wqwqwqw eb Design",
+      "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    },
+   "frontEndDev": {
+      "skill":"Front End Devlopment",
+      "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    },
+   "CMS": {
+      "skill":"CMS",
+      "desc":"thi skill Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+    }
+
+}

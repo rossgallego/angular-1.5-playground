@@ -1,0 +1,28 @@
+h1{
+	background: transparent;
+	color: #fff;
+	font-size: 30px; 
+	font-weight: bold; 
+	padding-top: 0
+}
+.navbar{margin: 0;}
+
+.movies-results{}
+.movies-result {min-height: 1000px}
+.movies-results-images {height: 530px; overflow: hidden;} 
+.movies-results-image {width: 100%;} 
+.movie-search{
+	padding: 50px 0
+}
+.movie-search-label{width: 100%; text-align: center!important; padding: 10px; text-transform: uppercase; }
+.movie-search-input{ width: 100%; padding: 30px;}
+.movie-search-submit{ width: 100%; padding: 15px; margin-top: 20px }
+
+.znotes-content{background: #f1f1f1; padding: 30px; margin: 10px 0;}
+.znotes-form{padding: 30px; width: 100%; background: #f1f1f1}
+.znotes-form-group{width: 100%}
+.znotes-input{width: 100% !important}
+.znotes-note{width: 100% !important; margin: 20px 0}
+.znotes-submit{}
+
+

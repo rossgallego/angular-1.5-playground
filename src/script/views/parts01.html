@@ -1,0 +1,66 @@
+   <div>
+    <div class="jumbotron" ng-cloak>
+      <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-8">
+            <h1> test </h1>
+                <h2> </h2>
+
+
+            </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="container">
+    <!-- Example row of columns -->
+        <div ng-controller="box02controller">
+
+<div ng-repeat="power in superdata">
+    {{power.znoteTitle}}
+</div>
+
+       <h2> {{clark.alias}}</h2>
+            <div box02directive info="clark"></div>
+            <div box02directive info="bruce"></div>
+            <div box02directive info="peter"></div>
+            <div box02directive info="logan"></div>
+
+            <div class="clearfix"></div>
+            <div box02directive logan="{{logan.power}}"></div>
+            <div box02directive logan="{{clark.power}}"></div>
+
+            <div box02directive action="power()"></div>
+             <!-- <div box02directive name="{{ logan.alias }}"></div> -->
+
+                    <!-- <div ng-controller="milkListcontroller"> -->
+                    
+                    <!-- </div> -->
+            <div class="clearfix"></div>                      
+        </div>  
+        <div milk-listdirective></div>
+        <div class="clearfix"></div>  
+
+        <div ng-controller="formListController">
+            {{reed.power}}
+            <!-- <div form-list alias="racoon"></div> -->
+            <div form-list myalias="{{reed.alias}}"></div>
+            <div form-list myalias="{{sue.alias}}"></div>
+            <div form-list myalias="{{johnny.alias}}"></div>
+            <div form-list myalias="{{ben.alias}}"></div>
+
+            <div form-list pp="reed.alias"></div>
+
+            <!-- <div form-list change="changepower('where are you fantastic four')"></div> -->
+            <!-- <div form-list change="changepower('fly')"></div> -->
+             <div form-list change="changepower(message)"></div>
+             <div form-list change="changealias(message)"></div>
+        </div>   
+    </div>
+
+    <div style="height: 200px"></div>
+<!-- end -->
+</div>
